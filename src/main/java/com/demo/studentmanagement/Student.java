@@ -3,13 +3,13 @@ package com.demo.studentmanagement;
 public class Student {
 
     private int id, phone;
-    private String fullname, birth, gender, email, address, class;
+    private String fullname, birth, gender, email, address, sClass;
 
     public Student() {
 
     }
 
-    public Student(int id, String fullname, String birth, String gender, String email, String address, int phone, String class) {
+    public Student(int id, String fullname, String birth, String gender, String email, String address, int phone, String sClass) {
         this.id = id;
         this.fullname = fullname;
         this.birth = birth;
@@ -17,7 +17,7 @@ public class Student {
         this.email = email;
         this.address = address;
         this.phone = phone;
-        this.class = class;
+        this.sClass = sClass;
     }
 
     public int getId() {
@@ -76,8 +76,12 @@ public class Student {
         this.address = address;
     }
 
+    public String getsClass() {
+        return sClass;
+    }
+
     public void input() {
-        Scanner
+
     }
 
     @Override
