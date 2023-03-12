@@ -45,7 +45,7 @@ public class CRUD {
             statement.setString(5, student.getGender());
             statement.setString(6, student.getEmail());
             statement.setString(7, student.getAddress());
-            statement.setString(8,student.getsClass());
+            statement.setString(8,student.getClassObj());
             //B2.4: Lấy dữ liệu từ CSDL ra
             statement.execute();
         } catch (SQLException ex) {
