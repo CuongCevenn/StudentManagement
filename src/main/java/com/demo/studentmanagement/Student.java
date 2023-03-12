@@ -1,23 +1,26 @@
 package com.demo.studentmanagement;
 
+import java.util.*;
+
 public class Student {
 
     private int id, phone;
-    private String fullname, birth, gender, email, address, sClass;
+    private String fullName, birth, gender, email, address;
+    public String classObj;    // sau nay co the update classObj thanh 1 class rieng biet mang thong tin rieng
 
     public Student() {
 
     }
 
-    public Student(int id, String fullname, String birth, String gender, String email, String address, int phone, String sClass) {
+    public Student(int id, String fullName, String birth, String gender, String email, String address, int phone, String classObj) {
         this.id = id;
-        this.fullname = fullname;
+        this.fullName = fullName;
         this.birth = birth;
         this.gender = gender;
         this.email = email;
         this.address = address;
         this.phone = phone;
-        this.sClass = sClass;
+        this.classObj = classObj;
     }
 
     public int getId() {
@@ -28,20 +31,12 @@ public class Student {
         this.id = id;
     }
 
-    public int getPhone() {
-        return phone;
-    }
-
-    public void setPhone(int phone) {
-        this.phone = phone;
-    }
-
     public String getFullname() {
-        return fullname;
+        return fullName;
     }
 
     public void setFullname(String fullname) {
-        this.fullname = fullname;
+        this.fullName = fullName;
     }
 
     public String getBirth() {
@@ -76,12 +71,41 @@ public class Student {
         this.address = address;
     }
 
-    public String getsClass() {
-        return sClass;
+    public int getPhone() {
+        return phone;
     }
 
-    public void input() {
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
 
+    public String getClassObj() {
+        return classObj;
+    }
+
+    public void setClassObj(String classObj) {
+        this.classObj = classObj;
+    }
+
+
+    public void input() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Nhap MSV :");
+        id = scan.nextInt();
+        System.out.println("Nhap Ho va Ten :");
+        fullName = scan.nextLine();
+        System.out.println("Nhap Ngay Sinh (YYYY-MM-DD) :");
+        birth = scan.nextLine();
+        System.out.println("Nhap Gioi Tinh :");
+        gender = scan.nextLine();
+        System.out.println("Nhap Email : ");
+        email = scan.nextLine();
+        System.out.println("Nhap Dia Chi :");
+        address = scan.nextLine();
+        System.out.println("Nhap So Dien Thoai :");
+        phone = scan.nextInt();
+        System.out.println("Nhap Lop Hoc :");
+        classObj = scan.nextLine();
     }
 
     @Override
@@ -89,12 +113,12 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", phone=" + phone +
-                ", fullname='" + fullname + '\'' +
+                ", fullName='" + fullName + '\'' +
                 ", birth='" + birth + '\'' +
                 ", gender='" + gender + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
+                ", classObj='" + classObj + '\'' +
                 '}';
     }
-
 }
