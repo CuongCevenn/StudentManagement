@@ -25,6 +25,12 @@ public class StudentAddController extends Controller {
     private TextField class_;
     @FXML
     private Label label1;
+    @FXML
+    private TextField email;
+    @FXML
+    private TextField phone;
+    @FXML
+    private TextField address;
 
     public void loadLoginView() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login-view.fxml"));
@@ -50,6 +56,11 @@ public class StudentAddController extends Controller {
         String sId = studentId.getText();
         String sName = name.getText();
         String sClass = class_.getText();
+        String sEmail = email.getText();
+        String sPhone = phone.getText();
+        String sAddress = address.getText();
+        int ssId = Integer.parseInt(sId);
+        int ssPhone = Integer.parseInt(sPhone);
         System.out.println("Bạn đã chọn lựa chọn: " + selectedOption);
         System.out.println(selectedDate);
         System.out.println(sId);
