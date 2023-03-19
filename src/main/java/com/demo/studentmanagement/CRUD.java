@@ -62,13 +62,13 @@ public class CRUD {
             ResultSet resultSet = statement.executeQuery(sql);
             //B2.5: Đọc dữ liệu từ ResultSet => convert thành các object trong Java
             while(resultSet.next()) {
-                Student stu = new Student(resultSet.getInt("id"),
+                Student stu = new Student(resultSet.getString("id"),
                         resultSet.getString("fullname"),
                         resultSet.getString("birth"),
                         resultSet.getString("gender"),
                         resultSet.getString("email"),
                         resultSet.getString("address"),
-                        resultSet.getInt("phone"),
+                        resultSet.getString("phone"),
                         resultSet.getString("classObj"));
                 stu.show();
             }
@@ -113,13 +113,13 @@ public class CRUD {
                     + " values (?, ?, ?, ?, ?, ?, ?, ?)";
             //B2.2: Viết Java Truy vấn CSDL
             statement = conn.prepareCall(sql);
-            statement.setInt(1, student.getId());
+            statement.setString(1, student.getId());
             statement.setString(2, student.getFullname());
             statement.setString(3, student.getBirth());
             statement.setString(4, student.getGender());
             statement.setString(5, student.getEmail());
             statement.setString(6, student.getAddress());
-            statement.setInt(7, student.getPhone());
+            statement.setString(7, student.getPhone());
             statement.setString(8,student.getClassObj());
             //B2.4: Lấy dữ liệu từ CSDL ra
             statement.execute();
@@ -169,9 +169,9 @@ public class CRUD {
             statement.setString(3, student.getGender());
             statement.setString(4, student.getEmail());
             statement.setString(5, student.getAddress());
-            statement.setInt(6, student.getPhone());
+            statement.setString(6, student.getPhone());
             statement.setString(7, student.getClassObj());
-            statement.setInt(8, student.getId());
+            statement.setString(8, student.getId());
             //B2.4: Lấy dữ liệu từ CSDL ra
             statement.execute();
         } catch (SQLException ex) {
@@ -261,13 +261,13 @@ public class CRUD {
             ResultSet resultSet = statement.executeQuery();
             //B2.5: Đọc dữ liệu từ ResultSet => convert thành các object trong Java
             while(resultSet.next()) {
-                Student stu = new Student(resultSet.getInt("id"),
+                Student stu = new Student(resultSet.getString("id"),
                         resultSet.getString("fullname"),
                         resultSet.getString("birth"),
                         resultSet.getString("gender"),
                         resultSet.getString("email"),
                         resultSet.getString("address"),
-                        resultSet.getInt("phone"),
+                        resultSet.getString("phone"),
                         resultSet.getString("classObj"));
                 stu.show();
             }

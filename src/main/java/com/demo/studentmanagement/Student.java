@@ -4,15 +4,14 @@ import java.util.*;
 
 public class Student {
 
-    private int id, phone;
-    private String fullName, birth, gender, email, address;
+    private String id, fullName, birth, gender, email, address, phone;
     public String classObj;    // sau nay co the update classObj, address thanh 1 class rieng biet mang thong tin rieng
 
     public Student() {
 
     }
 
-    public Student(int id, String fullName, String birth, String gender, String email, String address, int phone, String classObj) {
+    public Student(String id, String fullName, String birth, String gender, String email, String address, String phone, String classObj) {
         this.id = id;
         this.fullName = fullName;
         this.birth = birth;
@@ -23,11 +22,11 @@ public class Student {
         this.classObj = classObj;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -35,7 +34,7 @@ public class Student {
         return fullName;
     }
 
-    public void setFullname(String fullname) {
+    public void setFullname(String fullName) {
         this.fullName = fullName;
     }
 
@@ -71,11 +70,11 @@ public class Student {
         this.address = address;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -91,7 +90,7 @@ public class Student {
     public void input() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Nhap MSV :");
-        id = scan.nextInt();
+        id = scan.nextLine();
         System.out.println("Nhap Ho va Ten :");
         fullName = scan.nextLine();
         System.out.println("Nhap Ngay Sinh (YYYY-MM-DD) :");
@@ -103,7 +102,7 @@ public class Student {
         System.out.println("Nhap Dia Chi :");
         address = scan.nextLine();
         System.out.println("Nhap So Dien Thoai :");
-        phone = scan.nextInt();
+        phone = scan.nextLine();
         System.out.println("Nhap Lop Hoc :");
         classObj = scan.nextLine();
     }
