@@ -18,6 +18,12 @@ public class StudentFindController extends Controller {
     private Label dateOfBirth;
     @FXML
     private Label sClass;
+    @FXML
+    private Label email;
+    @FXML
+    private Label phone;
+    @FXML
+    private Label address;
 
     public void loadLoginView() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login-view.fxml"));
@@ -35,6 +41,16 @@ public class StudentFindController extends Controller {
         controller.setStage(stage);
         Scene currentScene = stage.getScene();
         currentScene.setRoot(root);
+    }
+
+    private void onAction(Student student) {
+        name.setText(student.getFullname());
+        gender.setText(student.getGender());
+        dateOfBirth.setText(student.getBirth());
+        sClass.setText(student.getClassObj());
+        email.setText(student.getEmail());
+        phone.setText(student.getPhone());
+        address.setText(student.getAddress());
     }
 
     @FXML
