@@ -50,7 +50,7 @@ public class StudentAddController extends Controller {
         currentScene.setRoot(root);
     }
 
-    private void addAction() {
+    private void addAction(Student student) {
         String selectedOption = addChoiceBox.getSelectionModel().getSelectedItem().toString();
         LocalDate selectedDate = dateOfBirth.getValue();
         String sId = studentId.getText();
@@ -59,13 +59,14 @@ public class StudentAddController extends Controller {
         String sEmail = email.getText();
         String sPhone = phone.getText();
         String sAddress = address.getText();
-        int ssId = Integer.parseInt(sId);
-        int ssPhone = Integer.parseInt(sPhone);
-        System.out.println("Bạn đã chọn lựa chọn: " + selectedOption);
-        System.out.println(selectedDate);
-        System.out.println(sId);
-        System.out.println(sName);
-        System.out.println(sClass);
+        student.setId(sId);
+        student.setFullname(sName);
+        student.setBirth(selectedDate.toString());
+        student.setGender(selectedOption);
+        student.setEmail(sEmail);
+        student.setAddress(sAddress);
+        student.setPhone(sPhone);
+        student.setClassObj(sClass);
     }
 
     @FXML
@@ -76,7 +77,6 @@ public class StudentAddController extends Controller {
     @FXML
     protected void onBackButtonClick() throws IOException {
         loadStudentScene();
-        addAction();
     }
 
     @FXML
@@ -90,6 +90,8 @@ public class StudentAddController extends Controller {
 
     @FXML
     protected void onAddButtonClick() throws IOException {
-
+        Student student = new Student();
+        addAction(student);
+        System.out.println(student.toString());
     }
 }

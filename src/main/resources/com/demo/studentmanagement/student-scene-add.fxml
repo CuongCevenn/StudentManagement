@@ -108,6 +108,24 @@
                </font>
             </Button>
             <Text layoutX="294.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MM/DD/YYYY" />
+            <Text layoutX="36.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="37.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="36.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="email" layoutX="132.0" layoutY="184.0" />
+            <TextField fx:id="phone" layoutX="132.0" layoutY="213.0" />
+            <TextField fx:id="address" layoutX="132.0" layoutY="240.0" />
          </children>
       </AnchorPane>
       <Line endX="605.0" layoutX="101.0" layoutY="105.0" startX="-100.0" />
