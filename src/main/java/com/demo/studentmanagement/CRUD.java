@@ -45,7 +45,7 @@ public class CRUD {
     }
 
 
-    private static void showStudents() {
+    public static void showStudents() {
         //Các bước cần làm để lấy dữ liệu trong CSDL ra & hiển thị
         Connection conn = null;
         Statement statement = null;
@@ -71,6 +71,7 @@ public class CRUD {
                         resultSet.getString("phone"),
                         resultSet.getString("classObj"));
                 stu.show();
+                Main.student_list.add(stu);
             }
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
