@@ -40,10 +40,19 @@ public class LoginController extends Controller {
     protected void onLoginButtonClick() throws IOException {
         String username = usernameField.getText();
         String password = passwordField.getText();
-
+        if (Main.user_pass.containsKey(username)) {
+            if (Main.user_pass.get(username).equals(password)) {
+                Main.username = username;
+                loadStudentScene();
+            } else {
+                System.out.println("Password is incorrect");
+                thongBao.setText("Password is incorrect!");
+            }
+        } else {
+            thongBao.setText("Username doesn't exist");
+        }
 //        Main.changeLoginToHello();
 //        thongBao.setText("Your password is incorrect!");
-        loadStudentScene();
     }
 
     public void loadScene2() throws IOException {
@@ -59,6 +68,7 @@ public class LoginController extends Controller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene.fxml"));
         Parent root = fxmlLoader.load();
         StudentController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
         controller.setStage(stage);
         Scene currentScene = stage.getScene();
         currentScene.setRoot(root);

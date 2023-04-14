@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -24,6 +25,16 @@ public class StudentFindController extends Controller {
     private Label phone;
     @FXML
     private Label address;
+    @FXML
+    private Label thongBao;
+    @FXML
+    private TextField sId;
+    @FXML
+    private Label username;
+
+    public void setUsername(String username) {
+        this.username.setText(username);
+    }
 
     public void loadLoginView() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login-view.fxml"));
@@ -38,6 +49,7 @@ public class StudentFindController extends Controller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene.fxml"));
         Parent root = fxmlLoader.load();
         StudentController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
         controller.setStage(stage);
         Scene currentScene = stage.getScene();
         currentScene.setRoot(root);
@@ -65,6 +77,14 @@ public class StudentFindController extends Controller {
 
     @FXML
     protected void onFindButtonClick() throws IOException {
-
+        String sId_ = sId.getText();
+        if (Main.student_id_list.contains(sId_)) {
+            thongBao.setText("Find successfully!");
+            Student student = new Student(sId_);
+            CRUD.findStudent(student);
+            onAction(student);
+        } else {
+            thongBao.setText("SId is not exist!");
+        }
     }
 }

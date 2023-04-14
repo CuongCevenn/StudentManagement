@@ -31,6 +31,13 @@ public class StudentAddController extends Controller {
     private TextField phone;
     @FXML
     private TextField address;
+    private boolean checked;
+    @FXML
+    private Label username;
+
+    public void setUsername(String username) {
+        this.username.setText(username);
+    }
 
     public void loadLoginView() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login-view.fxml"));
@@ -45,6 +52,7 @@ public class StudentAddController extends Controller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene.fxml"));
         Parent root = fxmlLoader.load();
         StudentController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
         controller.setStage(stage);
         Scene currentScene = stage.getScene();
         currentScene.setRoot(root);
@@ -81,18 +89,26 @@ public class StudentAddController extends Controller {
 
     @FXML
     protected void onCheckButtonClick() throws IOException {
-        if (false) {
+        if (studentId.getText().equals("")) {
+            label1.setText("Student ID is invalid!");
+            checked = false;
+        } else if (Main.student_id_list.contains(studentId.getText())) {
             label1.setText("Student ID exist");
+            checked = false;
         } else {
             label1.setText("OK");
+            checked = true;
         }
     }
 
     @FXML
     protected void onAddButtonClick() throws IOException {
-        Student student = new Student();
-        addAction(student);
-        CRUD.insertStudent(student);
-        System.out.println(student.toString());
+        if (checked) {
+            Student student = new Student();
+            addAction(student);
+            CRUD.insertStudent(student);
+            Main.student_id_list.add(student.getId());
+            System.out.println(student.toString());
+        }
     }
 }

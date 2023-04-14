@@ -27,7 +27,16 @@ public class StudentDeleteController extends StudentController {
     @FXML
     private Label thongBao;
     @FXML
+    private Label thongBaoDelete;
+    @FXML
     private TextField sID;
+    private boolean checked = false;
+    @FXML
+    private Label username;
+
+    public void setUsername(String username) {
+        this.username.setText(username);
+    }
 
     public void loadLoginView() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login-view.fxml"));
@@ -42,9 +51,20 @@ public class StudentDeleteController extends StudentController {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene.fxml"));
         Parent root = fxmlLoader.load();
         StudentController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
         controller.setStage(stage);
         Scene currentScene = stage.getScene();
         currentScene.setRoot(root);
+    }
+
+    private void onAction(Student student) {
+        name.setText(student.getFullname());
+        gender.setText(student.getGender());
+        dateOfBirth.setText(student.getBirth());
+        sClass.setText(student.getClassObj());
+        email.setText(student.getEmail());
+        phone.setText(student.getPhone());
+        address.setText(student.getAddress());
     }
 
     @FXML
@@ -59,7 +79,26 @@ public class StudentDeleteController extends StudentController {
 
     @FXML
     protected void onFindButtonClick() throws IOException {
-        String sID_ = sID.getText();
-        System.out.println(sID_);
+        String sId_ = sID.getText();
+        if (Main.student_id_list.contains(sId_)) {
+            thongBao.setText("Find successfully!");
+            Student student = new Student(sId_);
+            CRUD.findStudent(student);
+            onAction(student);
+            checked = true;
+        } else {
+            thongBao.setText("SId is not exist!");
+            checked = false;
+        }
+    }
+
+    @FXML
+    protected void onDeleteButtonClick() throws IOException {
+        if (checked) {
+            Student student = new Student(sID.getText());
+            CRUD.deleteStudent(student);
+            Main.student_id_list.remove(sID.getText());
+            thongBaoDelete.setText("Delete successfully!");
+        }
     }
 }

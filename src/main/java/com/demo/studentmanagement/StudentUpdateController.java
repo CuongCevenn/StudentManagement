@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class StudentUpdateController extends Controller {
     @FXML
@@ -23,7 +24,21 @@ public class StudentUpdateController extends Controller {
     @FXML
     private TextField class_;
     @FXML
+    private TextField email;
+    @FXML
+    private TextField phone;
+    @FXML
+    private TextField address;
+    @FXML
     private Label label1;
+    private boolean checked;
+
+    @FXML
+    private Label username;
+
+    public void setUsername(String username) {
+        this.username.setText(username);
+    }
 
     public void loadLoginView() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login-view.fxml"));
@@ -38,9 +53,29 @@ public class StudentUpdateController extends Controller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene.fxml"));
         Parent root = fxmlLoader.load();
         StudentController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
         controller.setStage(stage);
         Scene currentScene = stage.getScene();
         currentScene.setRoot(root);
+    }
+
+    private void addAction(Student student) {
+        String selectedOption = addChoiceBox.getSelectionModel().getSelectedItem().toString();
+        LocalDate selectedDate = dateOfBirth.getValue();
+        String sId = studentId.getText();
+        String sName = name.getText();
+        String sClass = class_.getText();
+        String sEmail = email.getText();
+        String sPhone = phone.getText();
+        String sAddress = address.getText();
+        student.setId(sId);
+        student.setFullname(sName);
+        student.setBirth(selectedDate.toString());
+        student.setGender(selectedOption);
+        student.setEmail(sEmail);
+        student.setAddress(sAddress);
+        student.setPhone(sPhone);
+        student.setClassObj(sClass);
     }
 
     @FXML
@@ -55,15 +90,21 @@ public class StudentUpdateController extends Controller {
 
     @FXML
     protected void onCheckButtonClick() throws IOException {
-        if (false) {
-            label1.setText("Student ID exist");
+        if (Main.student_id_list.contains(studentId.getText())) {
+            label1.setText("OK!");
+            checked = true;
         } else {
-            label1.setText("OK");
+            label1.setText("Invalid");
+            checked = false;
         }
     }
 
     @FXML
     protected void onUpdateButtonClick() throws IOException {
-
+        if (checked) {
+            Student student = new Student();
+            addAction(student);
+            CRUD.updateStudent(student);
+        }
     }
 }

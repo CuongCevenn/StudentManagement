@@ -1,0 +1,8 @@
+.root {
+    -fx-background-image: url('background.jpg');
+    -fx-background-size: cover;
+}
+
+#backgroundImageView {
+    -fx-opacity: 0.5; /* tùy chọn */
+}

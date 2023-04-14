@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -15,6 +16,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class StudentController extends Controller {
+    @FXML
+    private Label username;
+
+    public void setUsername(String username) {
+        this.username.setText(username);
+    }
 
     public void loadLoginView() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login-view.fxml"));
@@ -29,6 +36,7 @@ public class StudentController extends Controller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene-add.fxml"));
         Parent root = fxmlLoader.load();
         StudentAddController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
         controller.setStage(stage);
         Scene currentScene = stage.getScene();
         currentScene.setRoot(root);
@@ -38,6 +46,7 @@ public class StudentController extends Controller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene-find.fxml"));
         Parent root = fxmlLoader.load();
         StudentFindController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
         controller.setStage(stage);
         Scene currentScene = stage.getScene();
         currentScene.setRoot(root);
@@ -47,6 +56,7 @@ public class StudentController extends Controller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene-update.fxml"));
         Parent root = fxmlLoader.load();
         StudentUpdateController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
         controller.setStage(stage);
         Scene currentScene = stage.getScene();
         currentScene.setRoot(root);
@@ -56,6 +66,7 @@ public class StudentController extends Controller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene-delete.fxml"));
         Parent root = fxmlLoader.load();
         StudentDeleteController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
         controller.setStage(stage);
         Scene currentScene = stage.getScene();
         currentScene.setRoot(root);
@@ -108,6 +119,7 @@ public class StudentController extends Controller {
         col8.setCellValueFactory(new PropertyValueFactory<>("classObj"));
         table.getColumns().addAll(col1, col2, col3, col4, col5, col6, col7, col8);
 
+        CRUD.showStudents();
         ObservableList<Student> data = FXCollections.observableArrayList(Main.student_list);
         table.setItems(data);
         System.out.println("1");

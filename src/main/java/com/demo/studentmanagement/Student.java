@@ -11,6 +11,10 @@ public class Student {
 
     }
 
+    public Student(String id) {
+        this.id = id;
+    }
+
     public Student(String id, String fullName, String birth, String gender, String email, String address, String phone, String classObj) {
         this.id = id;
         this.fullName = fullName;

@@ -18,11 +18,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="621.0" layoutY="23.0" text="admin">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
+      <Label fx:id="username" layoutX="621.0" layoutY="23.0" text="admin" />
       <Text layoutX="58.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Calibri; -fx-font-weight: bold;" text="Student Management System">
          <font>
             <Font size="34.0" />
@@ -86,22 +82,22 @@
                </font>
             </Label>
             <TextField fx:id="sID" layoutX="130.0" layoutY="32.0" />
-            <Label fx:id="name" layoutX="130.0" layoutY="67.0" text="Label">
+            <Label fx:id="name" layoutX="130.0" layoutY="67.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="gender" layoutX="130.0" layoutY="102.0" text="Label">
+            <Label fx:id="gender" layoutX="130.0" layoutY="102.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="dateOfBirth" layoutX="130.0" layoutY="135.0" text="Label">
+            <Label fx:id="dateOfBirth" layoutX="130.0" layoutY="135.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="sClass" layoutX="130.0" layoutY="166.0" text="Label">
+            <Label fx:id="sClass" layoutX="130.0" layoutY="166.0">
                <font>
                   <Font size="14.0" />
                </font>
@@ -127,26 +123,31 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Label fx:id="email" layoutX="130.0" layoutY="193.0" text="Label">
+            <Label fx:id="email" layoutX="130.0" layoutY="193.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="phone" layoutX="130.0" layoutY="221.0" text="Label">
+            <Label fx:id="phone" layoutX="130.0" layoutY="221.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="address" layoutX="130.0" layoutY="249.0" text="Label">
+            <Label fx:id="address" layoutX="130.0" layoutY="249.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button layoutX="356.0" layoutY="235.0" mnemonicParsing="false" text="Delete">
+            <Button layoutX="356.0" layoutY="235.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
+            <Label fx:id="thongBaoDelete" layoutX="338.0" layoutY="279.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <Line endX="605.0" layoutX="101.0" layoutY="105.0" startX="-100.0" />
