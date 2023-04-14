@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ab0245a-8cd8-4afd-8886-6931c4766f50" name="Changes" comment="Find">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/CRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/CRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/CRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/CRUD.class" afterDir="false" />
-    </list>
+    <list default="true" id="1ab0245a-8cd8-4afd-8886-6931c4766f50" name="Changes" comment="Thêm bảng show student tự động tạo khi khởi chạy chương trình." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681355478577</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Thêm bảng show student tự động tạo khi khởi chạy chương trình.">
+      <created>1681359880050</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681359880050</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +200,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Khong co gi" />
     <MESSAGE value="Find" />
-    <option name="LAST_COMMIT_MESSAGE" value="Find" />
+    <MESSAGE value="Thêm bảng show student tự động tạo khi khởi chạy chương trình." />
+    <option name="LAST_COMMIT_MESSAGE" value="Thêm bảng show student tự động tạo khi khởi chạy chương trình." />
   </component>
 </project>
