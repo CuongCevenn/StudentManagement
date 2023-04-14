@@ -92,6 +92,7 @@ public class StudentAddController extends Controller {
     protected void onAddButtonClick() throws IOException {
         Student student = new Student();
         addAction(student);
+        CRUD.insertStudent(student);
         System.out.println(student.toString());
     }
 }

@@ -16,22 +16,22 @@ public class CRUD {
 
     // test
     public static void main(String[] args) {
-        int choose;
-
-        do {
-            showMenu();
-            choose = Integer.parseInt(scan.nextLine());
-
-            switch (choose) {
-                case 1 -> showStudents();
-                case 2 -> insertStudent();
-                case 3 -> updateStudent();
-                case 4 -> deleteStudent();
-                case 5 -> findStudent();
-                case 6 -> System.out.println("Exit!!!");
-                default -> System.out.println("Failed!!!");
-            }
-        } while(choose != 6);
+//        int choose;
+//
+//        do {
+//            showMenu();
+//            choose = Integer.parseInt(scan.nextLine());
+//
+//            switch (choose) {
+//                case 1 -> showStudents();
+//                case 2 -> insertStudent();
+//                case 3 -> updateStudent();
+//                case 4 -> deleteStudent();
+//                case 5 -> findStudent();
+//                case 6 -> System.out.println("Exit!!!");
+//                default -> System.out.println("Failed!!!");
+//            }
+//        } while(choose != 6);
     }
 
     static void showMenu() {
@@ -97,10 +97,7 @@ public class CRUD {
 
 
     // Insert
-    private static void insertStudent() {
-        Student student = new Student();
-        student.input();
-
+    public static void insertStudent(Student student) {
         //Các bước cần làm để lấy dữ liệu trong CSDL ra & hiển thị
         Connection conn = null;
         PreparedStatement statement = null;
