@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ab0245a-8cd8-4afd-8886-6931c4766f50" name="Changes" comment="Thêm bảng show student tự động tạo khi khởi chạy chương trình." />
+    <list default="true" id="1ab0245a-8cd8-4afd-8886-6931c4766f50" name="Changes" comment="Thêm bảng show student tự động tạo khi khởi chạy chương trình.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene-delete.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/student-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/student-scene.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +48,7 @@
   </component>
   <component name="ProjectId" id="2MYjvo6sPMFTsStb8NsRHP4v3O1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -170,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681359880050</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Thêm bảng show student tự động tạo khi khởi chạy chương trình.">
+      <created>1681470648392</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681470648392</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -52,6 +52,15 @@ public class StudentController extends Controller {
         currentScene.setRoot(root);
     }
 
+    public void loadStudentDeleteView() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene-delete.fxml"));
+        Parent root = fxmlLoader.load();
+        StudentDeleteController controller = fxmlLoader.getController();
+        controller.setStage(stage);
+        Scene currentScene = stage.getScene();
+        currentScene.setRoot(root);
+    }
+
     @FXML
     protected void onLogoutButtonClick() throws IOException {
         loadLoginView();
@@ -73,7 +82,12 @@ public class StudentController extends Controller {
     }
 
     @FXML
-    private TableView<Student> table;
+    protected void onDeleteButtonClick() throws IOException {
+        loadStudentDeleteView();
+    }
+
+    @FXML
+    private TableView<Student> table = new TableView<>();
 
     public void initialize() {
         TableColumn<Student, String> col1 = new TableColumn<>("SID");
@@ -96,6 +110,6 @@ public class StudentController extends Controller {
 
         ObservableList<Student> data = FXCollections.observableArrayList(Main.student_list);
         table.setItems(data);
-        System.out.println(Main.student_list);
+        System.out.println("1");
     }
 }
