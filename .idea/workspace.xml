@@ -4,39 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ab0245a-8cd8-4afd-8886-6931c4766f50" name="Changes" comment="Thử nghiệm hàm insertStudent">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/Resource/backgound.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/Resource/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/Resource/background_1.jpg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+    <list default="true" id="1ab0245a-8cd8-4afd-8886-6931c4766f50" name="Changes" comment="App QLSV Ver 1.0">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/CourseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/CourseDetailsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/TeacherController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/course-details-scene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/course-scene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/teacher-scene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StudentManagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagement.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/CRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/CRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentAddController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentFindController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/studentmanagement/StudentUpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/login-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene-add.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene-add.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene-delete.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene-delete.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene-find.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene-find.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene-update.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene-update.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/demo/studentmanagement/student-scene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/CRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/CRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentAddController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentAddController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentDeleteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentDeleteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentFindController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentFindController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentUpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/StudentUpdateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/login-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/student-scene-add.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/student-scene-add.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/student-scene-delete.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/student-scene-delete.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/student-scene-find.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/studentmanagement/student-scene-find.fxml" afterDir="false" />
@@ -51,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,7 +81,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/CNPM/StudentManagement/src/main/resources/com/demo/studentmanagement/Resource",
+    "last_opened_file_path": "D:/CNPM/StudentManagement/src/main/resources/com/demo/studentmanagement",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -101,7 +89,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CNPM\StudentManagement\src\main\resources\com\demo\studentmanagement" />
       <recent name="D:\CNPM\StudentManagement\src\main\resources\com\demo\studentmanagement\Resource" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CNPM\StudentManagement\src\main\resources\com\demo\studentmanagement" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -249,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681473185147</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="App QLSV Ver 1.0">
+      <created>1681491977811</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681491977811</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,6 +279,7 @@
     <MESSAGE value="Find" />
     <MESSAGE value="Thêm bảng show student tự động tạo khi khởi chạy chương trình." />
     <MESSAGE value="Thử nghiệm hàm insertStudent" />
-    <option name="LAST_COMMIT_MESSAGE" value="Thử nghiệm hàm insertStudent" />
+    <MESSAGE value="App QLSV Ver 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="App QLSV Ver 1.0" />
   </component>
 </project>

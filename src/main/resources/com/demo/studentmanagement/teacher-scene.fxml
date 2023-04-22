@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.studentmanagement.StudentController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.studentmanagement.TeacherController">
    <children>
       <Button layoutX="615.0" layoutY="51.0" mnemonicParsing="false" onAction="#onLogoutButtonClick" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: darkgrey; -fx-text-fill: white; -fx-font-family: sans-serif;" text="Log out">
          <font>
@@ -25,33 +25,13 @@
             <Font size="34.0" />
          </font>
       </Text>
-      <Button layoutX="58.0" layoutY="120.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="126.0" style="-fx-background-color: yellow;" text="Student">
+      <Button layoutX="58.0" layoutY="120.0" mnemonicParsing="false" onAction="#onStudentButtonClick" prefHeight="39.0" prefWidth="126.0" text="Student">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
       <AnchorPane layoutX="210.0" layoutY="124.0" prefHeight="310.0" prefWidth="484.0" style="-fx-border-color: red;">
          <children>
-            <Button layoutX="35.0" layoutY="257.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="39.0" prefWidth="83.0" text="Add">
-               <font>
-                  <Font name="Tahoma Bold" size="13.0" />
-               </font>
-            </Button>
-            <Button layoutX="153.0" layoutY="257.0" mnemonicParsing="false" onAction="#onFindButtonClick" prefHeight="39.0" prefWidth="83.0" text="Find">
-               <font>
-                  <Font name="Tahoma Bold" size="13.0" />
-               </font>
-            </Button>
-            <Button layoutX="387.0" layoutY="257.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="39.0" prefWidth="83.0" text="Delete">
-               <font>
-                  <Font name="Tahoma Bold" size="13.0" />
-               </font>
-            </Button>
-            <Button layoutX="270.0" layoutY="257.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="39.0" prefWidth="83.0" text="Update">
-               <font>
-                  <Font name="Tahoma Bold" size="13.0" />
-               </font>
-            </Button>
             <ScrollPane layoutX="35.0" layoutY="21.0" prefHeight="228.0" prefWidth="432.0">
                <TableView fx:id="table" prefHeight="214.0" prefWidth="419.0">
                   <columns>
@@ -75,12 +55,12 @@
             <Image url="@Resource/admin_pic.png" />
          </image>
       </ImageView>
-      <Button layoutX="58.0" layoutY="240.0" mnemonicParsing="false" onAction="#onTeacherButtonClick" prefHeight="39.0" prefWidth="126.0" text="Teacher">
+      <Button layoutX="58.0" layoutY="240.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="126.0" style="-fx-background-color: yellow;" text="Teacher">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="58.0" layoutY="360.0" mnemonicParsing="false" onAction="#onCourseButtonClick" prefHeight="39.0" prefWidth="126.0" text="Course">
+      <Button layoutX="58.0" layoutY="368.0" mnemonicParsing="false" onAction="#onCourseButtonClick" prefHeight="39.0" prefWidth="126.0" text="Course">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

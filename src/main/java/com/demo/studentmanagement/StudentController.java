@@ -32,6 +32,26 @@ public class StudentController extends Controller {
         currentScene.setRoot(root);
     }
 
+    public void loadTeacherView() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("teacher-scene.fxml"));
+        Parent root = fxmlLoader.load();
+        TeacherController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
+        controller.setStage(stage);
+        Scene currentScene = stage.getScene();
+        currentScene.setRoot(root);
+    }
+
+    public void loadCourseView() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("course-scene.fxml"));
+        Parent root = fxmlLoader.load();
+        CourseController controller = fxmlLoader.getController();
+        controller.setUsername(Main.username);
+        controller.setStage(stage);
+        Scene currentScene = stage.getScene();
+        currentScene.setRoot(root);
+    }
+
     public void loadStudentAddView() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-scene-add.fxml"));
         Parent root = fxmlLoader.load();
@@ -95,6 +115,16 @@ public class StudentController extends Controller {
     @FXML
     protected void onDeleteButtonClick() throws IOException {
         loadStudentDeleteView();
+    }
+
+    @FXML
+    protected void onTeacherButtonClick() throws IOException {
+        loadTeacherView();
+    }
+
+    @FXML
+    protected void onCourseButtonClick() throws IOException {
+        loadCourseView();
     }
 
     @FXML

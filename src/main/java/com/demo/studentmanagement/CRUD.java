@@ -38,6 +38,137 @@ public class CRUD {
 //        System.out.println(student.toString());
     }
 
+    public static void showTeacher() {
+        Main.teacher_list = new ArrayList<Teacher>();
+        Connection conn = null;
+        Statement statement = null;
+        try {
+            //B1. Tạo kết nối tới CSDL
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_management",
+                    "root", "");
+
+            //B2. Tạo 1 truy vấn tới CSDL
+            //B2.1: Viết 1 lệnh sql lấy danh sách sinh viên
+            String sql = "select * from teacher";
+            //B2.2: Viết API Java Trúy vấn CSDL
+            statement = conn.createStatement();
+            //B2.4: Lấy dữ liệu từ CSDL ra
+            ResultSet resultSet = statement.executeQuery(sql);
+            //B2.5: Đọc dữ liệu từ ResultSet => convert thành các object trong Java
+            while(resultSet.next()) {
+                Teacher teacher = new Teacher(resultSet.getString("id"),
+                        resultSet.getString("fullname"),
+                        resultSet.getString("birth"),
+                        resultSet.getString("gender"),
+                        resultSet.getString("email"),
+                        resultSet.getString("address"),
+                        resultSet.getString("phone"),
+                        resultSet.getString("quali"),
+                        resultSet.getString("exper"),
+                        resultSet.getString("achie"));
+                Main.teacher_list.add(teacher);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            //B3. Close connection
+            if(statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            if(conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
+
+    public static void showCourse() {
+        Main.course_list = new ArrayList<Course>();
+        Connection conn = null;
+        Statement statement = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_management",
+                    "root", "");
+            String sql = "SELECT DISTINCT course_id, name_course FROM course";
+            statement = conn.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                Course course = new Course(resultSet.getString("course_id"),
+                        resultSet.getString("name_course"));
+                Main.course_list.add(course);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            //B3. Close connection
+            if(statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            if(conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
+
+    public static void showCourseDetails(String course) {
+        Main.student_course_list = new ArrayList<Student>();
+        Connection conn = null;
+        PreparedStatement statement = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_management",
+                    "root", "");
+            String sql = "SELECT student.* FROM student JOIN course ON student.id = course.student_id WHERE course.course_id = ?";
+            statement = conn.prepareStatement(sql);
+            statement.setString(1, course);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Student stu = new Student(resultSet.getString("id"),
+                        resultSet.getString("fullname"),
+                        resultSet.getString("birthday"),
+                        resultSet.getString("gender"),
+                        resultSet.getString("email"),
+                        resultSet.getString("address"),
+                        resultSet.getString("phone"),
+                        resultSet.getString("classObj"));
+                stu.show();
+                Main.student_course_list.add(stu);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            //B3. Close connection
+            if(statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            if(conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
+
     public static void getStudentId() {
         Connection conn = null;
         Statement statement = null;
@@ -164,7 +295,6 @@ public class CRUD {
         //Finish Show Students
     }
 
-
     // Insert
     public static void insertStudent(Student student) {
         //Các bước cần làm để lấy dữ liệu trong CSDL ra & hiển thị
@@ -217,7 +347,6 @@ public class CRUD {
         }
     }
 
-
     // Update
     public static void updateStudent(Student student) {
         //Các bước cần làm để lấy dữ liệu trong CSDL ra & hiển thị
@@ -269,7 +398,6 @@ public class CRUD {
         }
         //Finish Show Students
     }
-
 
     // Delete
     public static void deleteStudent(Student student) {

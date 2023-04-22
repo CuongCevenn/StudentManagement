@@ -75,5 +75,15 @@
             <Image url="@Resource/admin_pic.png" />
          </image>
       </ImageView>
+      <Button layoutX="58.0" layoutY="240.0" mnemonicParsing="false" onAction="#onTeacherButtonClick" prefHeight="39.0" prefWidth="126.0" text="Teacher">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="58.0" layoutY="360.0" mnemonicParsing="false" onAction="#onCourseButtonClick" prefHeight="39.0" prefWidth="126.0" text="Course">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

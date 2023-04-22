@@ -16,8 +16,11 @@ import java.util.List;
 public class Main extends Application {
     private static Controller controller;
     public static List<Student> student_list = new ArrayList<Student>();
+    public static List<Student> student_course_list = new ArrayList<Student>();
+    public static List<Teacher> teacher_list = new ArrayList<Teacher>();
     public static List<String> student_id_list = new ArrayList<String>();
     public static Hashtable<String, String> user_pass = new Hashtable<String, String>();
+    public static List<Course> course_list = new ArrayList<Course>();
     public static String username = "";
 
     @Override
