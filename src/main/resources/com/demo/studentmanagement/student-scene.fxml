@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.studentmanagement.StudentController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.studentmanagement.Controller.StudentController">
    <children>
       <Button layoutX="615.0" layoutY="51.0" mnemonicParsing="false" onAction="#onLogoutButtonClick" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: darkgrey; -fx-text-fill: white; -fx-font-family: sans-serif;" text="Log out">
          <font>
@@ -66,6 +66,8 @@
                   </columns>
                </TableView>
             </ScrollPane>
+            <Text layoutX="35.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" />
+            <Label fx:id="total" layoutX="77.0" layoutY="6.0" text="Total" />
          </children>
       </AnchorPane>
       <Line endX="605.0" layoutX="101.0" layoutY="105.0" startX="-100.0" />
